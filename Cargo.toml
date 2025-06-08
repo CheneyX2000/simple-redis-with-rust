@@ -1,0 +1,22 @@
+[package]
+name = "single-redis-with-rust"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "simple-redis-with-rust-cli"
+path = "src/bin/cli.rs"
+
+[[bin]]
+name = "simple-redis-with-rust-server"
+path = "src/bin/server.rs"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+mini-redis = "0.4.1"
+bytes = "1"
+clap = { version = "4.2.7", features = ["derive"] }
+
+[[example]]
+name = "hello-redis"
+path = "examples/hello-redis.rs"
